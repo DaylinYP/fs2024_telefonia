@@ -1,0 +1,206 @@
+/*ESTILOS PARA TEMPLATE*/
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1 {
+    text-shadow: 1px 2px 2px #dadada;
+}
+
+a {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+h2,
+h5 {
+    margin-top: 2%;
+    text-shadow: 1px 2px 1px #b2b2b2;
+    text-align: center;
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    height: 80px;
+    width: 120px;
+}
+
+.btn-buscar {
+    margin-top: 70px;
+    height: 50px;
+}
+
+
+/* INICIA NAV */
+nav {
+    background-color: rgb(0, 0, 0);
+    height: 110px;
+    width: 100vw;
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+li a.active,
+li a:hover {
+    background-color: rgb(255, 194, 10);
+    color: black;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.navbar-custom {
+    background-color: transparent !important;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-form {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+/*FINALIZA NAV*/
+
+/*MENU DE HAMBURGUESA*/
+
+.enlace {
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.checkbtn {
+    font-size: 20px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/*TERMINA MENU DE HAMBURGUESA*/
+footer {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15%;
+    text-shadow: 1px 1px 1px #dadada;
+}
+
+/*INICIA MEDIA QUERIES*/
+@media screen and (max-width: 800px) {
+
+    img {
+        height: 60px;
+        width: 80px;
+    }
+
+    nav {
+        margin: 20px 0;
+        height: 100px;
+        width: 100%;
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 80%;
+        height: 100vh;
+        background: black;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+    }
+
+    nav ul li {
+        margin: 30px 0;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    li a.active,
+    li a:hover {
+        background-color: rgb(255, 194, 10);
+        color: black;
+        transition: 0.5s;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+
+    form .form-control {
+        max-width: 250px;
+    }
+
+    .botones-telefonia {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer {
+        width: 100vw;
+        font-size: 12px;
+    }
+
+    .table {
+        font-size: 0.875rem;
+        }
+
+
+}

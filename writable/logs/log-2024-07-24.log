@@ -1,0 +1,290 @@
+CRITICAL - 2024-07-24 14:23:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: GET, Route: actualizar_lineastelefonicas]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\LineasTelefonicasController.php(67): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->modificarLineasTelefonicas()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 14:24:49 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: actualizar_lineastelefonicas]
+in APPPATH\Views\form_modificar_lineastelefonicas.php on line 25.
+ 1 APPPATH\Views\form_modificar_lineastelefonicas.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\FS2024\\fs2024_telefonia\\app\\Views\\form_modificar_lineastelefonicas.php', 25)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\FS2024\\fs2024_telefonia\\app\\Views\\form_modificar_lineastelefonicas.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_lineastelefonicas', [], true)
+ 5 APPPATH\Controllers\LineasTelefonicasController.php(53): view('form_modificar_lineastelefonicas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->actualizarLineasTelefonicas()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 14:31:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: modificar_lineastelefonicas]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\LineasTelefonicasController.php(67): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->modificarLineasTelefonicas()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-24 14:35:23 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_telefonia`.`lineas_telefonicas`, CONSTRAINT `lineas_telefonicas_ibfk_1` FOREIGN KEY (`plan_id`) REFERENCES `planes` (`plan_id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `lineas_...', 0)
+#1 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `lineas_...')
+#2 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `lineas_...')
+#3 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `lineas_...', Array, false)
+#4 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\FS2024\fs2024_telefonia\app\Controllers\LineasTelefonicasController.php(68): CodeIgniter\Model->update('41410934', Array)
+#8 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->modificarLineasTelefonicas()
+#9 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+#10 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\FS2024\fs2024_telefonia\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-24 14:35:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_telefonia`.`lineas_telefonicas`, CONSTRAINT `lineas_telefonicas_ibfk_1` FOREIGN KEY (`plan_id`) REFERENCES `planes` (`plan_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[Method: POST, Route: modificar_lineastelefonicas]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `lineas_telefonicas` SET `no_telefono` = :no_telefono:, `fecha_pago` = :fecha_pago:, `meses_atraso` = :meses_atraso:, `plan_id` = :plan_id:, `cliente_id` = :cliente_id:
+WHERE `lineas_telefonicas`.`no_telefono` IN :lineas_telefonicas.no_telefono:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\LineasTelefonicasController.php(68): CodeIgniter\Model->update('41410934', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->modificarLineasTelefonicas()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 14:35:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_telefonia`.`lineas_telefonicas`, CONSTRAINT `lineas_telefonicas_ibfk_1` FOREIGN KEY (`plan_id`) REFERENCES `planes` (`plan_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `lineas_telefonicas` SET `no_telefono` = \'41410934\', `fecha_pago` = \'25\', `meses_atraso` = \'2\', `plan_id` = \'1\', `cliente_id` = \'34\'
+WHERE `lineas_telefonicas`.`no_telefono` IN (\'41410934\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `lineas_telefonicas` SET `no_telefono` = \'41410934\', `fecha_pago` = \'25\', `meses_atraso` = \'2\', `plan_id` = \'1\', `cliente_id` = \'34\'
+WHERE `lineas_telefonicas`.`no_telefono` IN (\'41410934\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `lineas_telefonicas` SET `no_telefono` = :no_telefono:, `fecha_pago` = :fecha_pago:, `meses_atraso` = :meses_atraso:, `plan_id` = :plan_id:, `cliente_id` = :cliente_id:
+WHERE `lineas_telefonicas`.`no_telefono` IN :lineas_telefonicas.no_telefono:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\LineasTelefonicasController.php(68): CodeIgniter\Model->update('41410934', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->modificarLineasTelefonicas()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 14:35:23 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_telefonia`.`lineas_telefonicas`, CONSTRAINT `lineas_telefonicas_ibfk_1` FOREIGN KEY (`plan_id`) REFERENCES `planes` (`plan_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `lineas_telefonicas` SET `no_telefono` = \'41410934\', `fecha_pago` = \'25\', `meses_atraso` = \'2\', `plan_id` = \'1\', `cliente_id` = \'34\'
+WHERE `lineas_telefonicas`.`no_telefono` IN (\'41410934\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `lineas_telefonicas` SET `no_telefono` = \'41410934\', `fecha_pago` = \'25\', `meses_atraso` = \'2\', `plan_id` = \'1\', `cliente_id` = \'34\'
+WHERE `lineas_telefonicas`.`no_telefono` IN (\'41410934\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `lineas_telefonicas` SET `no_telefono` = \'41410934\', `fecha_pago` = \'25\', `meses_atraso` = \'2\', `plan_id` = \'1\', `cliente_id` = \'34\'
+WHERE `lineas_telefonicas`.`no_telefono` IN (\'41410934\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `lineas_telefonicas` SET `no_telefono` = :no_telefono:, `fecha_pago` = :fecha_pago:, `meses_atraso` = :meses_atraso:, `plan_id` = :plan_id:, `cliente_id` = :cliente_id:
+WHERE `lineas_telefonicas`.`no_telefono` IN :lineas_telefonicas.no_telefono:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\LineasTelefonicasController.php(68): CodeIgniter\Model->update('41410934', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LineasTelefonicasController->modificarLineasTelefonicas()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LineasTelefonicasController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:13:24 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:16:26 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:19:48 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:24:13 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:24:13 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:24:14 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:24:14 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:24:14 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:24:36 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/2]
+in APPPATH\Views\form_modificar_clientes.php on line 30.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('2')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:25:45 --> Error: Cannot use object of type App\Models\ClientesModel as array
+[Method: GET, Route: actualizar_clientes/3]
+in APPPATH\Views\form_modificar_clientes.php on line 28.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_clientes', [], true)
+ 4 APPPATH\Controllers\ClientesController.php(54): view('form_modificar_clientes', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:27:18 --> TypeError: CodeIgniter\Database\BaseBuilder::hasOperator(): Argument #1 ($str) must be of type string, int given, called in C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseBuilder.php on line 793
+[Method: GET, Route: actualizar_clientes/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3418.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(793): CodeIgniter\Database\BaseBuilder->hasOperator(3)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(709): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', '3', null, 'AND ', true)
+ 3 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->where('3')
+ 4 APPPATH\Controllers\ClientesController.php(53): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:27:59 --> TypeError: CodeIgniter\Database\BaseBuilder::hasOperator(): Argument #1 ($str) must be of type string, int given, called in C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseBuilder.php on line 793
+[Method: GET, Route: actualizar_clientes/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3418.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(793): CodeIgniter\Database\BaseBuilder->hasOperator(3)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(709): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', '3', null, 'AND ', true)
+ 3 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->where('3')
+ 4 APPPATH\Controllers\ClientesController.php(53): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:28:01 --> TypeError: CodeIgniter\Database\BaseBuilder::hasOperator(): Argument #1 ($str) must be of type string, int given, called in C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseBuilder.php on line 793
+[Method: GET, Route: actualizar_clientes/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3418.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(793): CodeIgniter\Database\BaseBuilder->hasOperator(3)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(709): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', '3', null, 'AND ', true)
+ 3 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->where('3')
+ 4 APPPATH\Controllers\ClientesController.php(53): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:28:01 --> TypeError: CodeIgniter\Database\BaseBuilder::hasOperator(): Argument #1 ($str) must be of type string, int given, called in C:\xampp\htdocs\FS2024\fs2024_telefonia\system\Database\BaseBuilder.php on line 793
+[Method: GET, Route: actualizar_clientes/3]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3418.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(793): CodeIgniter\Database\BaseBuilder->hasOperator(3)
+ 2 SYSTEMPATH\Database\BaseBuilder.php(709): CodeIgniter\Database\BaseBuilder->whereHaving('QBWhere', '3', null, 'AND ', true)
+ 3 SYSTEMPATH\Model.php(930): CodeIgniter\Database\BaseBuilder->where('3')
+ 4 APPPATH\Controllers\ClientesController.php(53): CodeIgniter\Model->__call('where', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->actualizarClientes('3')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
